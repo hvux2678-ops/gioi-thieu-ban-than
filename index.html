@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+<header class="header">
+    <img src="avatar.jpg" alt="Ảnh đại diện">
+    <h1>Phan Hoàn Vũ</h1>
+</header>
+<section class="banner">
+    <h2>Self Information</h2>
+    <p class="intro">
+        Hi guys! Mình là Vũ, học sinh lớp 12B4 - Trường THPT Lê Hoàn.
+        Mình thích công nghệ, học IELTS và khám phá những điều mới mỗi ngày.
+    </p>
+</section>
+<main class="content">
+    <div class="card">
+        <div class="gallery">
+            <img src="school1.jpg">
+            <img src="school2.jpg">
+        </div>
+        <h3>Cuộc sống ở trường</h3>
+        <p>
+            Nơi mình học tập, tham gia hoạt động và tạo ra nhiều kỷ niệm cùng bạn bè và thầy cô.
+        </p>
+    </div>
+    <div class="card">
+        <div class="gallery">
+            <img src="home1.jpg">
+            <img src="home2.jpg">
+        </div>
+        <h3>Cuộc sống ở nhà</h3>
+        <p>
+            Không gian riêng để mình thư giãn, học tập và theo đuổi sở thích cá nhân mỗi ngày.
+        </p>
+    </div>
+</main>
+<footer class="footer">
+    <a href="https://www.facebook.com/julvuxx" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@julvux_" target="_blank"><i class="fab fa-tiktok"></i></a>
+    <a href="https://www.instagram.com/vuxhoanf_/" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:hvux2678@gmail.com"><i class="fas fa-envelope"></i></a>
+</footer>
+<div class="img-modal" id="imgModal">
+    <img id="modalImg">
+</div>
+<script>
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    document.querySelectorAll(".gallery img").forEach(img => {
+        img.addEventListener("click", () => {
+            modal.classList.add("show");
+            modalImg.src = img.src;
+        });
+    });
+    modal.addEventListener("click", () => {
+        modal.classList.remove("show");
+    });
+</script>
+</body>
+</html>
